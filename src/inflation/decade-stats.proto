@@ -17,7 +17,11 @@ package ms.nextjs_grpc;
 //  range        | numeric(10,2)    |           |          |
 //  stddev       | numeric(10,2)    |           |          |
 //  variance     | numeric(10,2)    |           |          |
-message InflationDecadeStats {
+message InflationDecadeStatsRequest { 
+  repeated string codes = 1;
+}
+
+message InflationDecadeStatsResponse {
   string countryName = 1;
   string countryCode = 2;
   uint32 decade = 3;
@@ -27,9 +31,10 @@ message InflationDecadeStats {
   float min = 7;
   float median = 8;
   float range = 9;
-  float range = 10;
+  float stdDev = 10;
+  float variance = 11;
 }
 
 service Inflation {
-  rpc decadeStats() returns (stream InflationDecadeStats);
+  rpc decadeStats(InflationDecadeStatsRequest) returns (stream InflationDecadeStatsResponse);
 }
