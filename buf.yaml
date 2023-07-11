@@ -5,3 +5,7 @@ breaking:
 lint:
   use:
     - DEFAULT
+build:
+  excludes:
+    - node_modules
+    - src/defunct

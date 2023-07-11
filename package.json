@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "@bufbuild/buf": "^1.23.1",
+    "@protobuf-ts/plugin": "^2.9.0"
+  },
+  "scripts": {
+    "generate:frontend": "yarn buf generate --template templates/buf.gen.frontend.yaml",
+    "generate:ms": "yarn buf generate --template templates/buf.gen.ms.yaml"
+  }
+}
