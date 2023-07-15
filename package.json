@@ -4,7 +4,7 @@
     "@protobuf-ts/plugin": "^2.9.0"
   },
   "scripts": {
-    "generate:frontend": "yarn buf generate --template templates/buf.gen.frontend.yaml",
-    "generate:ms": "yarn buf generate --template templates/buf.gen.ms.yaml"
+    "generate:frontend": "scripts/generate.sh frontend",
+    "generate:ms": "scripts/generate.sh ms"
   }
 }

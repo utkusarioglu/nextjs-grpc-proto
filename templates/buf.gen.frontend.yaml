@@ -2,5 +2,9 @@ version: v1
 
 plugins:
   - name: ts
-    out: ../frontend/packages/grpc/src/gen
-    opt: generate_dependencies,long_type_string,ts_nocheck
+    out: ../frontend/packages/grpc/src/gen/inflation
+    opt:
+      - generate_dependencies
+      - long_type_string
+      - server_grpc1
+      - ts_nocheck
